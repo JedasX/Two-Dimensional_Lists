@@ -1,23 +1,23 @@
-package ru.jedasX.LinkedList2D;
+package ru.jedasX.ArrayList2D;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The two-dimensional LinkedList
+ * The two-dimensional ArrayList
  */
-public class LinkedList2D<E>{
+public class ArrayList2D<E>{
 
-    List<LinkedList<E>> twoDList;
+    List<ArrayList<E>> twoDList;
 
-    public LinkedList2D() {
-        twoDList = new LinkedList<>();
+    public ArrayList2D() {
+        twoDList = new ArrayList<>();
     }
 
     /**
-     * @return count of Lists in two-dimensional LinkedList
+     * @return count of Lists in two-dimensional ArrayList
      */
     public int size() {
         return twoDList.size();
@@ -32,7 +32,7 @@ public class LinkedList2D<E>{
     }
 
     /**
-     * @return is two-dimensional LinkedList empty
+     * @return is two-dimensional ArrayList empty
      */
     public boolean isEmpty() {
         return twoDList.size() == 0;
@@ -48,7 +48,7 @@ public class LinkedList2D<E>{
 
     /**
      * @param c two-dimensional collection
-     * @return true if two-dimensional LinkedList contains of lists of c
+     * @return true if two-dimensional ArrayList contains of lists of c
      */
     public boolean containsAll(Collection<Collection<E>> c) {
         int count = 0;
@@ -62,11 +62,11 @@ public class LinkedList2D<E>{
 
     /**
      * @param c collection to compare with lists
-     * @return does two-dimensional LinkedList has at least one list identical to c
+     * @return does two-dimensional ArrayList has at least one list identical to c
      */
     public boolean containsList(Collection<E> c) {
         boolean ret = false;
-        for (LinkedList<E> list : twoDList) {
+        for (ArrayList<E> list : twoDList) {
             if (list == c) {
                 ret = true;
                 break;
@@ -77,7 +77,7 @@ public class LinkedList2D<E>{
 
     /**
      * @param e E object to compare
-     * @return does at least one list in two-dimensional LinkedList has at least one object equals to e
+     * @return does at least one list in two-dimensional ArrayList has at least one object equals to e
      */
     public boolean containsElement(E e) {
         boolean ret = false;
@@ -93,10 +93,10 @@ public class LinkedList2D<E>{
     }
 
     /**
-     * converts two-dimensional LinkedList to two-dimensional primitive array
-     * the first d size will be equals two-dimensional LinkedList size,
-     * the second d size will be equals max list size in two-dimensional LinkedList
-     * @return two-dimensional LinkedList had converted to two-dimensional primitive array
+     * converts two-dimensional ArrayList to two-dimensional primitive array
+     * the first d size will be equals two-dimensional ArrayList size,
+     * the second d size will be equals max list size in two-dimensional ArrayList
+     * @return two-dimensional ArrayList had converted to two-dimensional primitive array
      */
     public Object[][] toArray() {
         int maxSize = 0;
@@ -116,21 +116,21 @@ public class LinkedList2D<E>{
     }
 
     /**
-     * @param c collection to add in two-dimensional LinkedList;
+     * @param c collection to add in two-dimensional ArrayList;
      * @return always true
      */
     public boolean addAll(Collection<E> c) {
-        twoDList.add((LinkedList<E>) c);
+        twoDList.add((ArrayList<E>) c);
         return true;
     }
 
     /**
      * @param index indicating the insertion point
-     * @param c collection to add in two-dimensional LinkedList
+     * @param c collection to add in two-dimensional ArrayList
      * @return always true
      */
     public boolean addAll(int index, Collection<E> c) {
-        twoDList.add(index, (LinkedList<E>) c);
+        twoDList.add(index, (ArrayList<E>) c);
         return true;
     }
 
@@ -141,26 +141,26 @@ public class LinkedList2D<E>{
      */
     public boolean addAllElementsInList(int index, Collection<E> c) {
         for (int i = 0; i < c.size(); i ++) {
-            twoDList.get(index).add(((LinkedList<E>) c).get(i));
+            twoDList.get(index).add(((ArrayList<E>) c).get(i));
         }
         return true;
     }
 
     /**
      * @param c collection, whose index a user want to get
-     * @return index of c if two-dimensional LinkedList has list equals to c,
+     * @return index of c if two-dimensional ArrayList has list equals to c,
      * -1 if two-dimensional list hasn't list equals to c
      */
     public int indexOfList(Collection<E> c) {
-        return twoDList.indexOf((LinkedList<E>) c);
+        return twoDList.indexOf((ArrayList<E>) c);
     }
 
     /**
      * @param element E object, whose index a user want to get
-     * @return primitive int[][] array if two-dimensional LinkedList has desired element at least in one list ,
+     * @return primitive int[][] array if two-dimensional ArrayList has desired element at least in one list ,
      * the first number is index of list, that has desired element,
      * the second number is index of desired element in list by index equals to first number;
-     * null if no one list in two-dimensional LinkedList has desired element
+     * null if no one list in two-dimensional ArrayList has desired element
      */
     public int[] indexOfElement (E element) {
         for (int i = 0; i < twoDList.size(); i ++) {
@@ -174,10 +174,10 @@ public class LinkedList2D<E>{
     }
 
     /**
-     * remove all lists in two-dimensional LinkedList, which equals to c
+     * remove all lists in two-dimensional ArrayList, which equals to c
      * @param c collection, which a user want to remove
-     * @return true if two-dimensional LinkedList had at least one list equals to c, and it was removed,
-     * false if two-dimensional LinkedList has no one collection equals to c
+     * @return true if two-dimensional ArrayList had at least one list equals to c, and it was removed,
+     * false if two-dimensional ArrayList has no one collection equals to c
      */
     public boolean removeAllLists(Collection<E> c) {
         boolean ret = false;
@@ -195,11 +195,11 @@ public class LinkedList2D<E>{
     /**
      * removes first list, that equals to c;
      * @param c collection to remove;
-     * @return true if two-dimensional LinkedList had at least one list equals to c
-     * false if two-dimensional LinkedList hasn't at least one list equals to c
+     * @return true if two-dimensional ArrayList had at least one list equals to c
+     * false if two-dimensional ArrayList hasn't at least one list equals to c
      */
     public boolean removeList(Collection<E> c) {
-        for (LinkedList<E> list : twoDList) {
+        for (ArrayList<E> list : twoDList) {
             if (list == c) {
                 twoDList.remove(c);
                 return true;
@@ -209,16 +209,16 @@ public class LinkedList2D<E>{
     }
 
     /**
-     * removes all elements in all lists in two-dimensional LinkedList, which equals to at least one element in c
-     * @param c collection, whose elements a user want to remove from two-dimensional LinkedList
-     * @return true if two-dimensional LinkedList had at least one element equals to at least one element from c
+     * removes all elements in all lists in two-dimensional ArrayList, which equals to at least one element in c
+     * @param c collection, whose elements a user want to remove from two-dimensional ArrayList
+     * @return true if two-dimensional ArrayList had at least one element equals to at least one element from c
      */
     public boolean removeAllElements(Collection<E> c) {
         boolean ret = false;
         for (int i = 0; i < twoDList.size();) {
             for (int j = 0; i < twoDList.get(i).size();) {
                 for (int x = 0; x < c.size(); x ++) {
-                    if (twoDList.get(i).get(j) == ((LinkedList<E>) c).get(x)) {
+                    if (twoDList.get(i).get(j) == ((ArrayList<E>) c).get(x)) {
                         twoDList.get(i).remove(j);
                         ret = true;
                     } else {
@@ -234,7 +234,7 @@ public class LinkedList2D<E>{
     /**
      * removes first element, that equals to e
      * @param e obj, which a user wants to remove
-     * @return true if two-dimensional LinkedList had at least one element equals to e
+     * @return true if two-dimensional ArrayList had at least one element equals to e
      */
     public boolean removeElement(E e) {
         for (int i = 0; i < twoDList.size(); i ++) {
@@ -288,14 +288,14 @@ public class LinkedList2D<E>{
      * adds list
      */
     public void addList() {
-        twoDList.add(new LinkedList<>());
+        twoDList.add(new ArrayList<>());
     }
 
     /**
      * @param index index of list, which a user want to get
      * @return list by index
      */
-    public LinkedList<E> getList(int index) {
+    public ArrayList<E> getList(int index) {
         return twoDList.get(index);
     }
 
@@ -326,16 +326,16 @@ public class LinkedList2D<E>{
     }
 
     /**
-     * sets list to index in two-dimensional LinkedList
+     * sets list to index in two-dimensional ArrayList
      * @param listIndex index of list, where a user wants to set
      * @param list list, which a user want to set
      */
-    public void setList(int listIndex, LinkedList<E> list) {
+    public void setList(int listIndex, ArrayList<E> list) {
         twoDList.set(listIndex, list);
     }
 
     /**
-     * sets element to index of list by index in two-dimensional LinkedList
+     * sets element to index of list by index in two-dimensional ArrayList
      * @param listIndex index of list
      * @param ceilIndex index of element, where a user wants to set
      * @param e E obj to set
@@ -345,7 +345,7 @@ public class LinkedList2D<E>{
     }
 
     /**
-     * @return String presentation of two-dimensional LinkedList
+     * @return String presentation of two-dimensional ArrayList
      */
     @Override
     public String toString() {
