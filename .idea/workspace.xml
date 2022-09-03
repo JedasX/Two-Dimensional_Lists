@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09b5f971-8060-4e19-87d8-0a838f4cb927" name="Changes" comment="Added LinkedList2D realization">
-      <change afterPath="$PROJECT_DIR$/src/ru/jedasX/ArrayList2D/ArrayList2D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/jedasX/ArrayList2D/ArrayStringList2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/jedasX/LinkedList2D/LinkedList2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/jedasX/LinkedList2D/LinkedList2D.java" afterDir="false" />
+    <list default="true" id="09b5f971-8060-4e19-87d8-0a838f4cb927" name="Changes" comment="Master">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +22,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/Two-Dimensional_Lists/src/ru/jedasX/ArrayList2D"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/IdeaProjects/Two-Dimensional_Lists&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\IdeaProjects\Two-Dimensional_Lists\src\ru\jedasX\ArrayList2D" />
       <recent name="C:\Users\Admin\IdeaProjects\Two-Dimensional_Lists\src\ru\jedasX\LinkedList2D" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\IdeaProjects\Two-Dimensional_Lists" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -46,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662194844802</updated>
       <workItem from="1662194846483" duration="718000" />
+      <workItem from="1662196341592" duration="485000" />
     </task>
     <task id="LOCAL-00001" summary="Added LinkedList2D realization">
       <created>1662195257572</created>
