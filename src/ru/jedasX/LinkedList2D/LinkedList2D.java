@@ -278,10 +278,10 @@ public class LinkedList2D<E>{
     /**
      * clears element by index in list by index
      * @param listIndex index of list
-     * @param ceilIndex index of element in list by list index, which a user wants to clear
+     * @param elementIndex index of element in list by list index, which a user wants to clear
      */
-    public void clearCeil(int listIndex, int ceilIndex) {
-        twoDList.get(listIndex).remove(ceilIndex);
+    public void clearElement(int listIndex, int elementIndex) {
+        twoDList.get(listIndex).remove(elementIndex);
     }
 
     /**
@@ -337,11 +337,11 @@ public class LinkedList2D<E>{
     /**
      * sets element to index of list by index in two-dimensional LinkedList
      * @param listIndex index of list
-     * @param ceilIndex index of element, where a user wants to set
+     * @param elementIndex index of element, where a user wants to set
      * @param e E obj to set
      */
-    public void setCeil(int listIndex, int ceilIndex, E e) {
-        twoDList.get(listIndex).set(ceilIndex, e);
+    public void setElement(int listIndex, int elementIndex, E e) {
+        twoDList.get(listIndex).set(elementIndex, e);
     }
 
     /**
